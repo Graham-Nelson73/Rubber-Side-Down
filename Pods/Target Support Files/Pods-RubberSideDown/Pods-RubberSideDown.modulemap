@@ -1,0 +1,6 @@
+framework module Pods_RubberSideDown {
+  umbrella header "Pods-RubberSideDown-umbrella.h"
+
+  export *
+  module * { export * }
+}
