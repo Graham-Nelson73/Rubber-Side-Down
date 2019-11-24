@@ -17,7 +17,6 @@
 		2B162D0D23766A3700536ABF /* CrashEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B162D0C23766A3700536ABF /* CrashEvent.swift */; };
 		2B162D0F237A487600536ABF /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B162D0E237A487600536ABF /* TableViewController.swift */; };
 		2B2414A72387A982007A472C /* RubberSideDownIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B2414A62387A982007A472C /* RubberSideDownIcon.png */; };
-		2B87ADD82389E99000D992F6 /* TWILIO_INFO.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2B87ADD72389E98F00D992F6 /* TWILIO_INFO.txt */; };
 		C16EB6DF8A864F59EF02DB03 /* Pods_RubberSideDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDBDD0BBC526446ED01B03BE /* Pods_RubberSideDown.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,7 +33,6 @@
 		2B162D0C23766A3700536ABF /* CrashEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrashEvent.swift; sourceTree = "<group>"; };
 		2B162D0E237A487600536ABF /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		2B2414A62387A982007A472C /* RubberSideDownIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RubberSideDownIcon.png; path = ../../RubberSideDownIcon.png; sourceTree = "<group>"; };
-		2B87ADD72389E98F00D992F6 /* TWILIO_INFO.txt */ = {isa = PBXFileReference; explicitFileType = text.json; fileEncoding = 4; name = TWILIO_INFO.txt; path = ../../TWILIO_INFO.txt; sourceTree = "<group>"; };
 		99675A96D79FB6EF0440DCBA /* Pods-RubberSideDown.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RubberSideDown.debug.xcconfig"; path = "Target Support Files/Pods-RubberSideDown/Pods-RubberSideDown.debug.xcconfig"; sourceTree = "<group>"; };
 		FDBDD0BBC526446ED01B03BE /* Pods_RubberSideDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RubberSideDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFDCF12EA1FB58DF57D01F5A /* Pods-RubberSideDown.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RubberSideDown.release.xcconfig"; path = "Target Support Files/Pods-RubberSideDown/Pods-RubberSideDown.release.xcconfig"; sourceTree = "<group>"; };
@@ -73,7 +71,6 @@
 		2B162CF4236D607600536ABF /* RubberSideDown */ = {
 			isa = PBXGroup;
 			children = (
-				2B87ADD72389E98F00D992F6 /* TWILIO_INFO.txt */,
 				2B162CF5236D607600536ABF /* AppDelegate.swift */,
 				2B162CF7236D607600536ABF /* SceneDelegate.swift */,
 				2B162D0E237A487600536ABF /* TableViewController.swift */,
@@ -167,7 +164,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B162D05236D609900536ABF /* LaunchScreen.storyboard in Resources */,
-				2B87ADD82389E99000D992F6 /* TWILIO_INFO.txt in Resources */,
 				2B2414A72387A982007A472C /* RubberSideDownIcon.png in Resources */,
 				2B162D02236D609900536ABF /* Assets.xcassets in Resources */,
 				2B162CFD236D607600536ABF /* Main.storyboard in Resources */,
@@ -385,8 +381,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TWILIO_SID = AC600fab74cde6ee5da326da3ef5661d1c;
-				TWILIO_TOKEN = 6587afe83f06c0878a910574b5069ebf;
+				x = "";
+				y = "";
 			};
 			name = Debug;
 		};
@@ -407,8 +403,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TWILIO_SID = AC600fab74cde6ee5da326da3ef5661d1c;
-				TWILIO_TOKEN = 6587afe83f06c0878a910574b5069ebf;
+				x = "";
+				y = "";
 			};
 			name = Release;
 		};

@@ -17,13 +17,12 @@ var userLocation = ""
 
 let settings = UserDefaults.standard
 
-var SID = ""
-var TOKEN = ""
+var SID = "AC600fab74cde6ee5da326da3ef5661d1c"
+var TOKEN = "INSERT_AUTHENTICATION_TOKEN"
 
 class CrashEvent {
     
     init(){
-        setTokens()
     }
     
     func startTimer(){
@@ -56,24 +55,6 @@ class CrashEvent {
     func stopTimer(){
         timer?.invalidate()
         setCountdownTime()
-    }
-    
-    func setTokens(){
-        guard let path = Bundle.main.path(forResource: "TWILIO_INFO", ofType: "txt") else {return}
-        let url = URL(fileURLWithPath: path)
-        do {
-            let data = try Data(contentsOf: url)
-            if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: String] {
-                if let sid = json["TWILIO_SID"] {
-                    SID = sid
-                }
-                if let token = json["TWILIO_AUTH_TOKEN"] {
-                    TOKEN = token
-                }
-            }
-        } catch {
-            print("TWILIO_INFO.txt is missing or contains incorrect values")
-        }
     }
     
     func setEmergencyMessage(){
