@@ -66,9 +66,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>twilioSID</key>
-	<string>$(TWILIO_SID)</string>
-	<key>twilioToken</key>
-	<string>$(TWILIO_TOKEN)</string>
+	<key></key>
+	<string></string>
 </dict>
 </plist>
