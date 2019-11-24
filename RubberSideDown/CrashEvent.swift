@@ -17,12 +17,13 @@ var userLocation = ""
 
 let settings = UserDefaults.standard
 
-let SID = Bundle.main.object(forInfoDictionaryKey: "twilioSID") as! String
-let TOKEN = Bundle.main.object(forInfoDictionaryKey: "twilioToken") as! String
+var SID = ""
+var TOKEN = ""
 
 class CrashEvent {
     
     init(){
+        setTokens()
     }
     
     func startTimer(){
@@ -55,6 +56,24 @@ class CrashEvent {
     func stopTimer(){
         timer?.invalidate()
         setCountdownTime()
+    }
+    
+    func setTokens(){
+        guard let path = Bundle.main.path(forResource: "TWILIO_INFO", ofType: "txt") else {return}
+        let url = URL(fileURLWithPath: path)
+        do {
+            let data = try Data(contentsOf: url)
+            if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: String] {
+                if let sid = json["TWILIO_SID"] {
+                    SID = sid
+                }
+                if let token = json["TWILIO_AUTH_TOKEN"] {
+                    TOKEN = token
+                }
+            }
+        } catch {
+            print("TWILIO_INFO.txt is missing or contains incorrect values")
+        }
     }
     
     func setEmergencyMessage(){
@@ -96,10 +115,13 @@ class CrashEvent {
     
     //send request to twilio api to send SMS
     func sendSMS(_ message: String, to recipient: String){
-        let url = "https://api.twilio.com/2010-04-01/Accounts/\(SID)/Messages"
-        let param = ["From": "5102503891", "To": recipient, "Body": message]
-        AF.request(url, method: .post, parameters: param)
-            .authenticate(username: SID, password: TOKEN)
-            .response{ response in }
+        if recipient != ""{
+            let url = "https://api.twilio.com/2010-04-01/Accounts/\(SID)/Messages"
+            let param = ["From": "5102503891", "To": recipient, "Body": message]
+            AF.request(url, method: .post, parameters: param)
+                .authenticate(username: SID, password: TOKEN)
+                .response{ response in }
+            //print("Message sent to \(recipient): \(message)")
+        }
     }
 }
