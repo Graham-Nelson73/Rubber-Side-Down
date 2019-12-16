@@ -1,6 +1,6 @@
 # Rubber-Side-Down
 A motorcycle safety app for iOS that uses CoreMotion to detect when the user's bike has been tipped over. Sends an SMS to a list of 
-contacts with the rider's description and location.
+contacts with the rider's description and location. Users must use a strong phone mount to attach the device securely to the motorcycle. RAM&trade; and QuadLock&trade; mounts recommended.
 
 ## Usage
 Pressing "Calibrate" sets a base position for the device and allows lean tracking of the device and ergo the motorcyle it is secured to. When a target lean angle is achieved (determined by the class of motorcycle selected in the settings menu) a countdown timer will begin.
